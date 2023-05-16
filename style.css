@@ -1,0 +1,266 @@
+html,
+body {
+  background-color: #F6F9FD;
+  font-family: "Work Sans", sans-serif;
+}
+
+.title{
+  font-weight: 1000;
+  width: 90%;
+  text-align: center;
+  font-size: clamp(20px , 7vw , 50px);
+  position: absolute;
+  top: 10%;
+}
+
+.white {
+  fill: #F6F9FD;
+}
+
+.red {
+  fill: #FF002F;
+}
+
+svg {
+  width: 100%;
+}
+svg path {
+  transition: 0.3s all;
+}
+
+input {
+  font-family: "Work Sans", sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20vh auto;
+}
+@media screen and (max-width: 766px) {
+  .login-container {
+    flex-wrap: wrap;
+  }
+  .login-container .login-photo {
+    max-width: 350px;
+    margin: 10px auto;
+  }
+}
+.login-container .login-form {
+  text-align: center;
+  position: relative;
+}
+.login-container .login-form h1.form-text {
+  position: relative;
+  text-transform: uppercase;
+  color: #001CFF;
+  z-index: 1;
+  font-size: 3em;
+  font-weight: bold;
+}
+.login-container .login-form h1.form-text:before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+  height: 30px;
+  background: #0C5DE8;
+  width: 200px;
+  z-index: 0;
+  opacity: 0.5;
+}
+.login-container .login-form input {
+  display: block;
+  border-radius: 15px;
+}
+.login-container .login-form input[type=text],
+.login-container .login-form input[type=password],
+.login-container .login-form input[type=submit] {
+  margin: 10px auto;
+  box-shadow: 0px 0px 2px #222;
+}
+.login-container .login-form input[type=text],
+.login-container .login-form input[type=password] {
+  height: 40px;
+  width: 350px;
+  border: none;
+  border: 1px solid #001CFF;
+  padding-left: 15px;
+  transition: 0.3s all;
+}
+.login-container .login-form input[type=text]:focus,
+.login-container .login-form input[type=password]:focus {
+  border: none;
+  border-radius: 4px;
+  background: #0C5DE8;
+  color: #F6F9FD;
+}
+.login-container .login-form input[type=text]:focus::placeholder,
+.login-container .login-form input[type=password]:focus::placeholder {
+  color: #F6F9FD;
+  font-family: "Work Sans", sans-serif;
+}
+.login-container .login-form .checkbox {
+  position: relative;
+  margin: 10px auto 20px auto;
+  text-align: left;
+  cursor: pointer;
+  display: block;
+  user-select: none;
+}
+
+.login-container .login-form .checkbox:hover input[type=checkbox] ~ .checkmark {
+  background-color: #ccc;
+  border-radius: 15px;
+}
+.login-container .login-form .checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 15px;
+}
+.login-container .login-form .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.login-container .login-form .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s all;
+}
+.login-container .login-form .checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.login-container .login-form .checkbox input[type=checkbox]:checked ~ .checkmark:after {
+  opacity: 1;
+}
+.login-container .login-form .checkbox input[type=checkbox]:checked ~ .checkmark {
+  background-color: #001CFF;
+  border-radius: 15px;
+}
+.login-container .login-form .checkbox label.checkbox-trigger {
+  display: inline-block;
+  font-size: 0.8em;
+  margin-left: 30px;
+  line-height: 23px;
+}
+.login-container .login-form input[type=submit] {
+  width: 200px;
+  height: 40px;
+  border: none;
+  color: #F6F9FD;
+  background: #001CFF;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px #222;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 766px) {
+  .footer-container {
+    flex-wrap: wrap-reverse;
+  }
+  .footer-container .pages {
+    margin: 15px auto;
+  }
+  .footer-container .pages a {
+    font-size: 0.6em !important;
+  }
+}
+.footer-container .pages a {
+  color: #000;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 0.8em;
+  transition: 0.3s all;
+  padding: 8px;
+  border-radius: 10px;
+}
+.footer-container .pages a:hover {
+  color: #F6F9FD;
+  background: #001CFF;
+}
+.footer-container .social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-container .social-media ul li {
+  display: inline;
+  margin: 10px;
+}
+.footer-container .social-media ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.footer-container .social-media ul li a img {
+  width: 15px;
+}
+
+@media only screen and (min-width: 991px) {
+  .bar {
+    animation: 1s ease-out 0s 1 fromTop;
+  }
+
+  .white-space {
+    animation: 0.5s ease-out 0s 1 fromLeft;
+  }
+
+  .shape {
+    animation: 2.5s ease-out 0s 1 fromBottom;
+  }
+}
+.login-form {
+  animation: 1s ease-out 0s 1 fromTop;
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fromBottom {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fromRight {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Job Recruiter Dashboard UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+    <div class="app-left">
+      <button class="close-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-x">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="app-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-bar-chart-2">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+        <span>Recruiter</span>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-columns">
+              <path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18" />
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-briefcase">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+            Jobs
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-file">
+              <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+              <polyline points="13 2 13 9 20 9" />
+            </svg>
+            BarryCoins
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-users">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Team
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-pie-chart">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+              <path d="M22 12A10 10 0 0 0 12 2v10z" />
+            </svg>
+            Reports
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="app-main">
+      <div class="main-header-line">
+        <h1>BarryBank Dashboard</h1>
+        <div class="action-buttons">
+          <button class="open-right-area">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-activity">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+          </button>
+          <button class="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-menu">
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="chart-row three">
+        <div class="chart-container-wrapper">
+          <div class="chart-container">
+            <div class="chart-info-wrapper">
+              <h2>BarryCoins</h2>
+              <span id="total">0</span>
+            </div>
+            <div class="chart-svg">
+              <svg viewBox="0 0 36 36" class="circular-chart pink">
+                <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <text x="18" y="20.35" class="percentage">30%</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- partial -->
+  <!-- Add Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+  <!-- Add jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+
+    window.addEventListener('beforeunload', function () {
+      localStorage.setItem('user', "");
+    });
+
+
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyCN4KB82aEF-f1jQsu_41Os_QcMH9EAqhA",
+      authDomain: "brookx3-73468.firebaseapp.com",
+      databaseURL: "https://brookx3-73468-default-rtdb.firebaseio.com",
+      projectId: "brookx3-73468",
+      storageBucket: "brookx3-73468.appspot.com",
+      messagingSenderId: "1004382599882",
+      appId: "1:1004382599882:web:ddc82414810326d2855233"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the database service
+    var database = firebase.database();
+
+    var user = localStorage.getItem("user");
+
+    const value = localStorage.getItem("user");
+
+    // Get a reference to the counter node in the database
+    var counterRef = database.ref('users/' + value + '/' + '/total');
+
+    // Get a reference to the HTML elements
+    var countDisplay = $('#total');
+    var incrementBtn = $('#increment-btn');
+
+    // Check local storage for the 'animationPlayed' flag
+    if (!localStorage.getItem('animationPlayed')) {
+      // Set the 'animationPlayed' flag to true and play the animation
+      localStorage.setItem('animationPlayed', 'false');
+
+      // Display the current count and animate the count increase from 0 to the current value
+      counterRef.once('value', function (snapshot) {
+        var count = snapshot.val();
+        countDisplay.prop('Counter', 0).animate({ Counter: count }, {
+          duration: 2000,
+          easing: 'swing',
+          step: function (now) {
+            countDisplay.text(Math.ceil(now));
+          }
+        }).delay(2000).queue(function () {
+          // Cancel the animation loop after 2 seconds
+          $(this).stop();
+          $(this).clearQueue();
+        });
+      });
+    }
+
+    // Always update the count when there are changes
+    counterRef.on('value', function (snapshot) {
+      var count = snapshot.val();
+      countDisplay.text(count);
+    });
+
+    // Increment the count when the button is clicked
+    incrementBtn.on('click', function () {
+      counterRef.transaction(function (count) {
+        if (count === null) {
+          return 1;
+        } else {
+          return count + 1;
+        }
+      });
+    });
+
+    // Reset the 'animationPlayed' flag when the page is loaded
+    $(window).on('load', function () {
+      localStorage.removeItem('animationPlayed');
+    });
+
+
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
