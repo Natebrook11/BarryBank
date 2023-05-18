@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Job Recruiter Dashboard UI</title>
+  <title>Pandora. - Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/index.css">
 
 </head>
 
-<body>
+<body onload="load()">
 
 
 
@@ -34,7 +35,7 @@
           <line x1="12" y1="20" x2="12" y2="4" />
           <line x1="6" y1="20" x2="6" y2="14" />
         </svg>
-        <span>Recruiter</span>
+        <span>Pandora.</span>
       </div>
       <ul class="nav-list">
         <li class="nav-list-item active">
@@ -55,7 +56,7 @@
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
               <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
             </svg>
-            Jobs
+            Market
           </a>
         </li>
         <li class="nav-list-item">
@@ -97,7 +98,7 @@
     </div>
     <div class="app-main">
       <div class="main-header-line">
-        <h1>BarryBank Dashboard</h1>
+        <h1>Pandora. Dashboard</h1>
         <div class="action-buttons">
           <button class="open-right-area">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -122,47 +123,50 @@
         <div class="chart-container-wrapper">
           <div class="chart-container">
             <div class="chart-info-wrapper">
-              <h2>BarryCoins</h2>
+              <h2>🪙 BarryCoins 🪙</h2>
               <span id="total">0</span>
-            </div>
-            <div class="chart-svg">
-              <svg viewBox="0 0 36 36" class="circular-chart pink">
-                <path class="circle-bg" d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                <text x="18" y="20.35" class="percentage">30%</text>
-              </svg>
             </div>
           </div>
         </div>
       </div>
+      <button onclick="show('transfer')" style="background: #fff; color: black; margin-top: 20px;">Transfer</button>
     </div>
   </div>
   </div>
   </div>
   </div>
   </div>
+
+  <div id="transfer" class=" transfer-box hide">
+      <label for="sender">Sender:</label>
+      <input type="text" id="sender" name="sender" required><br><br>
+  
+      <label for="receiver">Receiver:</label>
+      <input type="text" id="receiver" name="receiver" required><br><br>
+  
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required><br><br>
+  
+      <input type="submit" value="Transfer">
+      <button onclick="show('transfer')" style="background: #fff; color: black; margin-top: 20px;">Close</button>
+  </div>
+
+
+
+
   <!-- partial -->
-  <!-- Add Firebase scripts -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Add jQuery library -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
+    window.addEventListener('load', console.log(localStorage.getItem('user')))
 
-    window.addEventListener('beforeunload', function () {
-      localStorage.setItem('user', "");
-    });
-
-
-    // Initialize Firebase
-    var firebaseConfig = {
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
       apiKey: "AIzaSyCN4KB82aEF-f1jQsu_41Os_QcMH9EAqhA",
       authDomain: "brookx3-73468.firebaseapp.com",
       databaseURL: "https://brookx3-73468-default-rtdb.firebaseio.com",
@@ -176,62 +180,39 @@
     // Get a reference to the database service
     var database = firebase.database();
 
-    var user = localStorage.getItem("user");
+    var value = localStorage.getItem("user");
 
-    const value = localStorage.getItem("user");
-
-    // Get a reference to the counter node in the database
-    var counterRef = database.ref('users/' + value + '/' + '/total');
+    var counterRef = firebase.database().ref('users/' + value + '/total');
 
     // Get a reference to the HTML elements
     var countDisplay = $('#total');
     var incrementBtn = $('#increment-btn');
 
-    // Check local storage for the 'animationPlayed' flag
-    if (!localStorage.getItem('animationPlayed')) {
-      // Set the 'animationPlayed' flag to true and play the animation
-      localStorage.setItem('animationPlayed', 'false');
+    // Display the current count and animate the count increase from 0 to the current value
+    counterRef.once('value', function (snapshot) {
+      var count = snapshot.val();
+      localStorage.setItem('count', count)
+      countDisplay.prop('Counter', 0).animate({ Counter: count }, {
+        duration: 1000,
+        easing: 'swing',
+        step: function (now) {
+          localStorage.setItem('count', count)
+          countDisplay.text(Math.ceil(now).toLocaleString()); // Add locale string to the count
+        }
+      })
+    });
 
-      // Display the current count and animate the count increase from 0 to the current value
-      counterRef.once('value', function (snapshot) {
-        var count = snapshot.val();
-        countDisplay.prop('Counter', 0).animate({ Counter: count }, {
-          duration: 2000,
-          easing: 'swing',
-          step: function (now) {
-            countDisplay.text(Math.ceil(now));
-          }
-        }).delay(2000).queue(function () {
-          // Cancel the animation loop after 2 seconds
-          $(this).stop();
-          $(this).clearQueue();
-        });
-      });
+    function show(value){
+      document.getElementById(value).classList.toggle('show')
     }
+
 
     // Always update the count when there are changes
     counterRef.on('value', function (snapshot) {
       var count = snapshot.val();
-      countDisplay.text(count);
+      var countlocal = count.toLocaleString()
+      countDisplay.text(countlocal); // Add locale string to the count
     });
-
-    // Increment the count when the button is clicked
-    incrementBtn.on('click', function () {
-      counterRef.transaction(function (count) {
-        if (count === null) {
-          return 1;
-        } else {
-          return count + 1;
-        }
-      });
-    });
-
-    // Reset the 'animationPlayed' flag when the page is loaded
-    $(window).on('load', function () {
-      localStorage.removeItem('animationPlayed');
-    });
-
-
   </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
   <script src="./script.js"></script>
