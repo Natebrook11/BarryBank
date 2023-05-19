@@ -2,55 +2,45 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Pandora. Bank - Login / SignIn </title>
-    <!-- Cool Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-    <!-- Our stylesheet -->
-    <link rel="stylesheet" type="text/css" href="index.css">
+  <meta charset="utf-8">
+  <title>Pandora. Bank - Login / SignIn </title>
+  <!-- Cool Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" type="text/css" href="index.css">
 
 </head>
 
 <body>
-    <h1 class="title">Pandora. Bank</h1>
-    <div id="content_container">
-        <div id="form_container">
-
-            <div id="form_content_container">
-                <div id="form_content_inner_container">
-                    <input type="text" id="full_name" placeholder="Full name">
-                    <input type="email" id="email" placeholder="youremail@gmail.com">
-                    <input type="password" id="password" placeholder="New Password">
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="button_container">
-        <button onclick="login()">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"></path>
-            </svg>
-            Iniciar Sesion
-          </button>
-          <button style="margin-top: 20px !important;" onclick="register()">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"></path>
-            </svg>
-            Crear usuario
-          </button>
-    </div>
-    <button style="margin-top: 20px; background: #ffffff00; color: black;" onclick="licence()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"></path>
-        </svg>
-        Licencia De Privacidad
-      </button>
+  <section>
+    <form>
+      <h1>Login</h1>
+      <div class="inputbox">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input id="full_name" placeholder="UserName" type="text" required>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input id="email" placeholder="youremail@gmail.com" type="email" required>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input type="password" id="password" placeholder="Password" type="password" required>
+      </div>
+      <div class="forget">
+        <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
+      </div>
+      <button onclick="login()">Log in</button>
+      <button style="margin-top: 10px;" onclick="register()">Register</button>
+      <div class="register">
+        <p>Don't have a account <a href="#">Register</a></p>
+      </div>
+    </form>
+  </section>
 </body>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -63,4 +53,5 @@
 
 <!-- Our script must be loaded after firebase references -->
 <script src="index.js"></script>
+
 </html>
