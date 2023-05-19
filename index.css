@@ -150,7 +150,8 @@ input {
  input[type=password] ,
  input[type=number] {
   height: 40px;
-  width: 350px;
+  width: 90%;
+  max-width: 650px;
   border: none;
   border: 1px solid #001CFF;
   padding-left: 15px;

@@ -53,9 +53,9 @@ function register () {
 
 
     // Push to Firebase Database
-    database_ref.child('users/' + user.uid).set(user_data)
+    database_ref.child('users/' + user.uid).set(user_data);
 
-    localStorage.setItem('user' , user.uid)
+    localStorage.setItem('user' , user.uid);
 
     // DOne
     setTimeout(function() {
