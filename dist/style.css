@@ -20,14 +20,13 @@
 
 body {
   line-height: 1.5;
-  min-height: 100vh;
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: var(--c-gray-900);
   color: var(--c-text-primary);
   display: flex;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
   justify-content: center;
+  height: 100%;
+  min-height: 100vh;
 }
 
 *,
@@ -52,17 +51,168 @@ a {
   color: inherit;
 }
 
-.responsive-wrapper {
-  width: 90%;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ffffff #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 0px none #000000;
+}
+
+
+
+.button-parrot {
+  margin-top: 6vh;
+  height: 10vh;
+}
+
+.button-parrot button {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 18px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+
+.button-parrot .parrot {
+  position: absolute;
+  width: 60px;
+  text-align: center;
+  -webkit-animation: blink 0.8s infinite;
+  animation: blink 0.8s infinite;
+  color: transparent;
+}
+
+.button-parrot .parrot:before {
+  content: "Click Me!";
+}
+
+.button-parrot .parrot:nth-child(1) {
+  top: -30px;
+  left: -40px;
+  font: 12px/1 "Margarine", sans-serif;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.button-parrot .parrot:nth-child(2) {
+  font: 12px/1 "Margarine", sans-serif;
+  right: -40px;
+  top: -20px;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.button-parrot .parrot:nth-child(3) {
+  font: 16px/1 "Margarine", sans-serif;
+  top: -60px;
+  left: 15px;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.button-parrot .parrot:nth-child(4) {
+  font: 18px/1 "Margarine", sans-serif;
+  top: -70px;
+  left: 95px;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
+.button-parrot .parrot:nth-child(5) {
+  font: 14px/1 "Margarine", sans-serif;
+  top: 80px;
+  left: 105px;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+.button-parrot .parrot:nth-child(6) {
+  font: 12px/1 "Margarine", sans-serif;
+  top: 80px;
+  left: 5px;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+}
+
+.button-parrot button:hover {
+  background: #fff;
+  color: #000000;
+  scale: .97;
+}
+
+.button-parrot button:hover .parrot:before {
+  content: "Do it!";
+  width: 70px;
+}
+
+@-webkit-keyframes blink {
+
+  25%,
+  75% {
+    color: transparent;
+  }
+
+  40%,
+  60% {
+    color: #fff;
+  }
+}
+
+@keyframes blink {
+
+  25%,
+  75% {
+    color: transparent;
+  }
+
+  40%,
+  60% {
+    color: #fff;
+  }
 }
 
 .app {
-  min-height: 80vh;
-  width: 95%;
-  max-width: 1600px;
+  width: 100%;
   background-color: var(--c-gray-800);
   padding: 2vw 4vw 6vw;
   display: flex;
@@ -84,6 +234,126 @@ a {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--c-gray-600);
+  }
+
+  .tile {
+    font-size: 30px !important;
+  }
+
+  .service-section h2 {
+    font-size: 7.5rem !important;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-section-footer {
+    color: var(--c-text-tertiary);
+    margin-top: 1rem;
+    font-size: 40px;
+
+  }
+
+  .transfer-section {
+    font-size: 40px;
+  }
+
+  .transfer-section-header h2 {
+    font-size: 3.5rem !important;
+  }
+
+  .transfer-section input {
+    height: 120px;
+  }
+
+  #userId {
+    font-size: 40px;
+  }
+
+  .copy {
+    scale: 2;
+    margin-top: 20px;
+  }
+
+
+  .button-parrot button {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font: 38px "Margarine", sans-serif;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+  }
+
+
+  .button-parrot .parrot:nth-child(1) {
+    top: -40px;
+    left: -50px;
+    font: 22px/1 "Margarine", sans-serif;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  }
+
+  .button-parrot .parrot:nth-child(2) {
+    font: 22px/1 "Margarine", sans-serif;
+    right: -50px;
+    top: -30px;
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+  }
+
+  .button-parrot .parrot:nth-child(3) {
+    font: 26px/1 "Margarine", sans-serif;
+    top: -70px;
+    left: 25px;
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+
+  .button-parrot .parrot:nth-child(4) {
+    font: 28px/1 "Margarine", sans-serif;
+    top: -80px;
+    left: 105px;
+    -webkit-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+  }
+
+  .button-parrot .parrot:nth-child(5) {
+    font: 24px/1 "Margarine", sans-serif;
+    top: 90px;
+    left: 115px;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+  }
+
+  .button-parrot .parrot:nth-child(6) {
+    font: 22px/1 "Margarine", sans-serif;
+    top: 90px;
+    left: 15px;
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
   }
 }
 
@@ -358,7 +628,7 @@ a {
   margin-top: 1.25rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .tiles {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -440,7 +710,7 @@ a {
 
 .transfer-box {
   padding: 20px;
-  background: #000000;
+  background: #00000000;
   width: 100%;
   border-radius: 25px;
   text-align: center;
@@ -449,14 +719,16 @@ a {
 }
 
 .transfer-box input {
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   line-height: 30px;
   width: 100%;
   border-radius: 15px;
   padding: 10px;
+  border: none;
 }
-.show{
+
+/* .show{
   display: block !important;
 }
 
@@ -464,7 +736,159 @@ a {
 
 .hide {
   display: none;
+} */
+
+/* tooltip settings 👇 */
+
+.copy {
+  /* button */
+  --button-bg: #353434;
+  --button-hover-bg: #464646;
+  --button-text-color: #CCCCCC;
+  --button-hover-text-color: #8bb9fe;
+  --button-border-radius: 10px;
+  --button-diameter: 36px;
+  --button-outline-width: 1px;
+  --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  /* --tooltip-transition-duration: 0.3s; */
+  /* 👆 if you need a transition, 
+  just remove the comment,
+  but I didn't like the transition :| */
 }
+
+.copy {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: var(--tooltip-font-size) var(--tooltip-font-family);
+  color: var(--tootip-text-color);
+  background: var(--tooltip-bg);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  border-radius: var(--toolptip-border-radius);
+  pointer-events: none;
+  -webkit-transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  content: attr(data-text-initial);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+  width: var(--tooltip-padding-y);
+  height: var(--tooltip-padding-y);
+  background: inherit;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -999;
+  pointer-events: none;
+}
+
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+  outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+  color: var(--button-hover-text-color);
+}
+
+.copy.clicked {
+  background-color: var(--button-hover-bg);
+}
+
+.copy.clicked .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy.clicked .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy.clicked .clipboard {
+  display: none;
+}
+
+.copy.clicked .checkmark {
+  display: block;
+}
+
 
 .tile-header {
   display: flex;

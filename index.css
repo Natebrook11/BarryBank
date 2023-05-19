@@ -201,6 +201,28 @@ input {
   width: 25px;
   background-color: #eee;
 }
+
+
+
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 0px none #000000;
+  }
  .checkbox .checkmark:after {
   content: "";
   position: absolute;
