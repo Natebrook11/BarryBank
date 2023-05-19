@@ -231,7 +231,7 @@ function transfer() {
       // Add the amount to the receiver's account
       receiverRef.child(receiver + '/total').once('value', function (snapshot) {
         var receiverBalance = snapshot.val();
-        receiverRef.child(receiver + '/total').set(receiverBalance + amount);
+        receiverRef.child(receiver + '/total').set (receiverBalance + amount);
       });
 
       alert('Amount transferred successfully!');
