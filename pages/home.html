@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen - Responsive Dashboard design for Financial CRM</title>
+    <link rel="stylesheet" href="/Pandora/src/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <script src='https://unpkg.com/phosphor-icons'></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+
+    <body>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+                <div class="icon-container">
+                    <img class="icon hexagon" />
+                </div>
+                <span class="name">Pandora. Bank</span>
+            </a>
+            <ul class="navbar-nav">
+                <li>
+                    <a href="#home" class="active"><img class="icon home" /><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#challenges"><img class="icon statistics" /><span>Chalenges</span></a>
+                </li>
+                <li>
+                    <a><img class="icon mail" /><span>Shop</span></a>
+                </li>
+                <li>
+                    <a><img class="icon user" /><span>Profile</span></a>
+                </li>
+                <li>
+                    <a><img class="icon file" /><span>Documents</span></a>
+                </li>
+            </ul>
+            <div class="navbar-footer">
+                <img class="image-documents" src="https://ozcanzaferayan.github.io/financial-crm/img/documents.svg"
+                    alt="documents" />
+                <div class="container">
+                    <h2>PDF Report</h2>
+                    <span>Annual detailed report</span>
+                    <a href="#" download>Download</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <header>
+                <section role="search">
+                    <form action="#" method="get">
+                        <div class="form-inline">
+                            <img class="icon search" />
+                            <input type="search" placeholder="Search" />
+                        </div>
+                    </form>
+                </section>
+
+                <section role="application">
+                    <button class="change-view">
+                        <img class="icon layout" />Change view
+                    </button>
+                    <button class="notification">
+                        <img class="icon notification" />
+                    </button>
+                    <button class="menu">
+                        <img class="icon menu" />
+                    </button>
+                </section>
+            </header>
+            <section id="home">
+                <h1 style="display: block !important; font-size: clamp(10px, 6vw , 30px); margin-left: 20px;">Pandora.
+                </h1>
+                <h1 style="display: block !important; font-size: clamp(10px, 10vw , 30px); margin-left: 20px;"
+                    id="total">
+                    Total : 0 🪙</h1>
+            </section>
+            <div class="charts-wrapper">
+                <section role="credit-card">
+                    <div class="top">
+                    </div>
+                    <div class="ccNumber">
+                        <span>
+                            <span> Your Id:</span><br>
+                            <span id="userId">˙˙˙˙ ˙˙˙˙ ˙˙˙˙ ˙˙˙˙ 5610</span></span><br>
+                    </div>
+                    <div class="ccBottom">
+                        <button onclick="copyToClipboard('user')" class="copy">
+                            <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
+                            <span>
+                                <svg xml:space="preserve" style="enable-background:new 0 0 512 512"
+                                    viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                                    <g>
+                                        <path fill="currentColor"
+                                            d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24"
+                                    y="0" x="0" height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                                    <g>
+                                        <path data-original="#000000" fill="currentColor"
+                                            d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="ccValidThru">
+                            <label>VALID THRU</label>
+                            <span>05/23</span>
+                        </div>
+                        <div class="ccCardHolder">
+                            <label>CARD HOLDER</label>
+                            <span>Pandora.</span>
+                        </div>
+                    </div>
+                </section>
+                <section role="chart" class="exchange-rates">
+                    <h3 class="title">Exchange rates</h3>
+                    <canvas id="exchangeRates"></canvas>
+                </section>
+                <section role="chart" class="last-costs">
+                    <h3 class="title">Last Costs</h3>
+                    <canvas id="last_costs"></canvas>
+
+                </section>
+                <section role="chart" class="efficiency">
+                    <canvas id="efficiency"></canvas>
+
+                </section>
+
+                <section id="challenges" class="challenges">
+                    <h1>Chalenges</h1>
+
+            </div>
+            </section>
+            </div>
+        </main>
+    </body>
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+    <script src='https://ozcanzaferayan.github.io/financial-crm/vendor/chartjs/Chart.roundedBarCharts.js'></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="/Pandora/src/home.js"></script>
+
+    <script src="/Pandora/src/chart.js"></script>
+    <script>
+
+        function toggleActiveClass() {
+            const navbarItems = document.querySelectorAll('.navbar-nav li a');
+            const sections = document.querySelectorAll('section');
+
+            navbarItems.forEach(item => {
+                item.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    // Remove "active" class from all items
+                    navbarItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    // Add "active" class to clicked item
+                    item.classList.add('active');
+
+                    // Scroll to the href of the clicked item
+                    const targetId = item.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Activate the corresponding item when a section becomes visible
+            const options = {
+                rootMargin: '-50% 0% -50% 0%', // Adjust the margin as needed
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.getAttribute('id');
+                        const correspondingNavItem = document.querySelector(`.navbar-nav li a[href="#${targetId}"]`);
+
+                        // Remove "active" class from all items
+                        navbarItems.forEach(item => {
+                            item.classList.remove('active');
+                        });
+
+                        // Add "active" class to corresponding navigation item
+                        correspondingNavItem.classList.add('active');
+                    }
+                });
+            }, options);
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Check if the user is at the home section or scrolled to the top
+            function checkScrollPosition() {
+                const homeSection = document.getElementById('home');
+                const homeNavItem = document.querySelector('.navbar-nav li a[href="#home"]');
+                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (homeSection && (homeSection.offsetTop === scrollPosition || scrollPosition === 0)) {
+                    homeNavItem.classList.add('active');
+                } else {
+                    homeNavItem.classList.remove('active');
+                }
+            }
+
+            // Call checkScrollPosition() on page load and scroll events
+            window.addEventListener('load', checkScrollPosition);
+            window.addEventListener('scroll', checkScrollPosition);
+        }
+
+        document.addEventListener('DOMContentLoaded', toggleActiveClass);
+
+
+        function getRandomColor(colors) {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        const backgroundColors = ['#f2f9f1', '#ddeedf', '#b6cdbd', '#b8e1dd'];
+        const progressBarColors = ['#062925', '#044a42', '#004a2f', '#283739', '#000'];
+
+        function increaseProgress(boxElement) {
+            const progressBar = boxElement.querySelector('.box-progress');
+            const progressPercentage = boxElement.querySelector('.box-progress-percentage');
+
+            let currentProgress = parseInt(progressPercentage.textContent);
+            let newProgress = currentProgress + 10;
+
+            if (newProgress > 100) {
+                newProgress = 100;
+            }
+
+            progressBar.style.width = `${newProgress}%`;
+            progressPercentage.textContent = `${newProgress}%`;
+
+            // Save the progress in localStorage with a unique identifier
+            const boxId = boxElement.dataset.info;
+            localStorage.setItem(`progress_${boxId}`, newProgress);
+        }
+
+        function navigateToHTMLFile(boxElement) {
+            const href = boxElement.dataset.href;
+            if (href) {
+                window.location.href = href;
+            }
+        }
+
+        function createProjectBox(date, headerText, subheaderText, buttonText, link) {
+            // Generate random colors for the background, progress bar line, and day reminder counter
+            const backgroundColor = getRandomColor(backgroundColors);
+            const progressBarColor = getRandomColor(progressBarColors);
+            const dayReminderColor = progressBarColor;
+
+            // Create the project box element
+            const projectBox = document.createElement('div');
+            projectBox.classList.add('project-box');
+            projectBox.dataset.info = date;
+            projectBox.dataset.href = 'path/to/html/file.html';
+            projectBox.style.backgroundColor = backgroundColor;
+
+            // Create the project box header
+            const header = document.createElement('div');
+            header.classList.add('project-box-header');
+
+            const dateSpan = document.createElement('span');
+            dateSpan.textContent = date;
+            header.appendChild(dateSpan);
+
+            const moreWrapper = document.createElement('div');
+            moreWrapper.classList.add('more-wrapper');
+
+            const moreButton = document.createElement('button');
+            moreButton.classList.add('project-btn-more');
+
+            const moreSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            moreSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+            moreSvg.setAttribute('width', '24');
+            moreSvg.setAttribute('height', '24');
+            moreSvg.setAttribute('viewBox', '0 0 24 24');
+            moreSvg.setAttribute('fill', 'none');
+            moreSvg.setAttribute('stroke', 'currentColor');
+            moreSvg.setAttribute('stroke-width', '2');
+            moreSvg.setAttribute('stroke-linecap', 'round');
+            moreSvg.setAttribute('stroke-linejoin', 'round');
+            moreSvg.classList.add('feather', 'feather-more-vertical');
+
+            const circle1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle1.setAttribute('cx', '12');
+            circle1.setAttribute('cy', '12');
+            circle1.setAttribute('r', '1');
+            moreSvg.appendChild(circle1);
+
+            const circle2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle2.setAttribute('cx', '12');
+            circle2.setAttribute('cy', '5');
+            circle2.setAttribute('r', '1');
+            moreSvg.appendChild(circle2);
+
+            const circle3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle3.setAttribute('cx', '12');
+            circle3.setAttribute('cy', '19');
+            circle3.setAttribute('r', '1');
+            moreSvg.appendChild(circle3);
+
+            moreButton.appendChild(moreSvg);
+            moreWrapper.appendChild(moreButton);
+            header.appendChild(moreWrapper);
+            projectBox.appendChild(header);
+
+            // Create the project box content header
+            const contentHeader = document.createElement('div');
+            contentHeader.classList.add('project-box-content-header');
+
+            const headerParagraph = document.createElement('p');
+            headerParagraph.classList.add('box-content-header');
+            headerParagraph.textContent = headerText;
+            contentHeader.appendChild(headerParagraph);
+
+            const subheaderParagraph = document.createElement('p');
+            subheaderParagraph.classList.add('box-content-subheader');
+            subheaderParagraph.textContent = subheaderText;
+            contentHeader.appendChild(subheaderParagraph);
+            projectBox.appendChild(contentHeader);
+
+            // Create the button
+            const button = document.createElement('a');
+            button.classList.add('box-btn');
+            button.href = link;
+            button.textContent = buttonText;
+            projectBox.appendChild(button);
+
+            // Create the progress bar wrapper
+            const progressWrapper = document.createElement('div');
+            progressWrapper.classList.add('box-progress-wrapper');
+
+            const progressHeader = document.createElement('p');
+            progressHeader.classList.add('box-progress-header');
+            progressHeader.textContent = 'Progress';
+            progressWrapper.appendChild(progressHeader);
+
+            const progressBar = document.createElement('div');
+            progressBar.classList.add('box-progress-bar');
+
+            const progress = document.createElement('span');
+            progress.classList.add('box-progress');
+            progress.style.width = '0%';
+            progress.style.backgroundColor = progressBarColor;
+            progressBar.appendChild(progress);
+
+            progressWrapper.appendChild(progressBar);
+
+            const progressPercentage = document.createElement('p');
+            progressPercentage.classList.add('box-progress-percentage');
+            progressPercentage.textContent = '0%';
+            progressWrapper.appendChild(progressPercentage);
+
+            projectBox.appendChild(progressWrapper);
+
+            // Create the project box footer
+            const footer = document.createElement('div');
+            footer.classList.add('project-box-footer');
+
+            const participants = document.createElement('div');
+            participants.classList.add('participants');
+
+            const addButton = document.createElement('button');
+            addButton.classList.add('add-participant');
+            addButton.style.color = dayReminderColor;
+
+            const addSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            addSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+            addSvg.setAttribute('width', '12');
+            addSvg.setAttribute('height', '12');
+            addSvg.setAttribute('viewBox', '0 0 24 24');
+            addSvg.setAttribute('fill', 'none');
+            addSvg.setAttribute('stroke', 'currentColor');
+            addSvg.setAttribute('stroke-width', '3');
+            addSvg.setAttribute('stroke-linecap', 'round');
+            addSvg.setAttribute('stroke-linejoin', 'round');
+            addSvg.classList.add('feather', 'feather-plus');
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', 'M12 5v14M5 12h14');
+            addSvg.appendChild(path);
+
+            addButton.appendChild(addSvg);
+            participants.appendChild(addButton);
+            footer.appendChild(participants);
+
+            const daysLeft = document.createElement('div');
+            daysLeft.classList.add('days-left');
+            daysLeft.style.color = dayReminderColor;
+            daysLeft.textContent = 'Days Left';
+            footer.appendChild(daysLeft);
+
+            projectBox.appendChild(footer);
+
+            // Create the project box wrapper
+            const projectBoxWrapper = document.createElement('div');
+            projectBoxWrapper.classList.add('project-box-wrapper');
+            projectBoxWrapper.appendChild(projectBox);
+
+            // Append the project box wrapper to the Challenges section
+            const challengesSection = document.querySelector('.challenges');
+            challengesSection.appendChild(projectBoxWrapper);
+
+            // Load the progress from localStorage if available
+            const boxId = projectBox.dataset.info;
+            const savedProgress = localStorage.getItem(`progress_${boxId}`);
+            if (savedProgress) {
+                const parsedProgress = parseInt(savedProgress);
+                const savedProgressBar = projectBox.querySelector('.box-progress');
+                const savedProgressPercentage = projectBox.querySelector('.box-progress-percentage');
+                savedProgressBar.style.width = `${parsedProgress}%`;
+                savedProgressPercentage.textContent = `${parsedProgress}%`;
+            }
+
+            // Attach event listeners
+            projectBox.addEventListener('click', () => increaseProgress(projectBox));
+            moreButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                navigateToHTMLFile(projectBox);
+            });
+        }
+
+
+        createProjectBox('2023-06-15', 'Earn 150 Coins simply by inviting your friends!', 'Pandora. Inc.', 'Invite Now!', '/Pandora/public/favicon.png');
+        createProjectBox('2023-06-21', 'Earn 150 Coins simply by inviting your friends!', 'Pandora. Inc.', 'Add Participant', '/Pandora/public/favicon.png');
+
+
+        function createCountdown(boxElement, targetDate) {
+            // Get the "Days Left" element within the box
+            const daysLeftElement = boxElement.querySelector('.days-left');
+
+            function updateCountdown() {
+                // Get the current date and time
+                const currentDate = new Date();
+
+                // Calculate the time difference in milliseconds
+                const timeDifference = targetDate - currentDate;
+
+                // Calculate days, hours, minutes, and seconds
+                let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                // Display the countdown in the "Days Left" element
+                daysLeftElement.textContent = `Days Left: ${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+            }
+
+            // Call the updateCountdown function immediately to initialize the countdown
+            updateCountdown();
+
+            // Call the updateCountdown function every second
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Get all project boxes on the page
+        const projectBoxes2 = document.querySelectorAll('.project-box');
+
+        // Iterate over each project box and create a countdown for it
+        projectBoxes2.forEach((box) => {
+            const dateInfo = box.dataset.info;
+            const targetDate = new Date(dateInfo);
+            createCountdown(box, targetDate);
+        });
+
+    </script>
+
+</html>
