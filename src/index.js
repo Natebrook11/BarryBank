@@ -59,7 +59,7 @@ function register () {
 
     // DOne
     setTimeout(function() {
-      window.location.href = "/Pandora/pages/home.html";
+      window.location.href = "/pages/home.html";
     }, 1500);
     
   })
@@ -106,7 +106,7 @@ function login () {
     // DOne
 
     setTimeout(function() {
-      window.location.href = "/Pandora/pages/home.html";
+      window.location.href = "/pages/home.html";
     }, 1000);
     
 

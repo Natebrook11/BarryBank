@@ -153,8 +153,8 @@ ul.navbar-nav {
 }
 
 .navbar-nav .icon.mail {
-  -webkit-mask: url(/Pandora/public/basket.svg) no-repeat center;
-  mask: url(/Pandora/public/basket.svg) no-repeat center;
+  -webkit-mask: url(/public/basket.svg) no-repeat center;
+  mask: url(/public/basket.svg) no-repeat center;
 }
 
 .navbar-nav .icon.user {
