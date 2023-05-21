@@ -437,13 +437,21 @@ main h1 {
   flex-wrap: wrap;
 }
 
+#userId{
+  text-align: center;
+  font-family: 'audiowide';
+  margin-left: -.5em;
+  font-size: clamp(10px , 4.5vw , 20px);
+}
+
 main section[role="credit-card"] {
-  width: 350px;
+  font-family: 'audiowide';
+  width: 400px;
   height: 210px;
   background-color: var(--primary-color);
   border-radius: 2em;
   position: relative;
-  margin-left: -6em;
+  margin-left: -5em;
   margin-bottom: 1em;
   padding: 2em;
   box-sizing: border-box;
@@ -516,7 +524,7 @@ section[role="chart"] .title {
 }
 
 main section[role="chart"].exchange-rates {
-  width: calc(100% - 270px);
+  width: calc(100% - 400px);
 }
 
 main section[role="chart"].last-costs {
@@ -544,6 +552,7 @@ main section[role="chart"].efficiency {
   /* Tablet (768px) */
   main section[role="credit-card"] {
     margin-left: 0;
+    width: 95%;
   }
 
   .charts-wrapper {
@@ -579,34 +588,18 @@ main section[role="chart"].efficiency {
 
   /* Phone (Small) */
   main section[role="credit-card"] {
-    width: 100%;
-    padding: 0.75em;
-    margin-bottom: 0.75em;
-    border-radius: 0;
+    width: 95%;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 15px;
     height: initial;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
 
-  main section[role="credit-card"] img {
-    width: 2em;
-  }
-
-  main section[role="credit-card"] img.apple_pay {
-    width: 2em;
-  }
-
-  main section[role="credit-card"] .ccNumber {
-    margin-top: 0.7em;
-  }
-
-  .ccBottom {
-    margin-top: 0.7em;
-  }
-
-  section[role="chart"] .title {
-    margin-bottom: 0.2em;
+  #userId{
+    margin-left: 0;
   }
 
   main section[role="chart"].exchange-rates,

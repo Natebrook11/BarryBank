@@ -78,7 +78,6 @@
                 <h1 style="display: block !important; font-size: clamp(10px, 10vw , 30px); margin-left: 20px;"
                     id="total">
                     Total : 0 🪙</h1>
-            </section>
             <div class="charts-wrapper">
                 <section role="credit-card">
                     <div class="top">
@@ -123,6 +122,7 @@
                         </div>
                     </div>
                 </section>
+                
                 <section role="chart" class="exchange-rates">
                     <h3 class="title">Exchange rates</h3>
                     <canvas id="exchangeRates"></canvas>
@@ -136,6 +136,7 @@
                     <canvas id="efficiency"></canvas>
 
                 </section>
+            </section>
 
                 <section id="challenges" class="challenges">
                     <h1>Chalenges</h1>
@@ -221,9 +222,7 @@
 
                 if (homeSection && (homeSection.offsetTop === scrollPosition || scrollPosition === 0)) {
                     homeNavItem.classList.add('active');
-                } else {
-                    homeNavItem.classList.remove('active');
-                }
+                } 
             }
 
             // Call checkScrollPosition() on page load and scroll events
